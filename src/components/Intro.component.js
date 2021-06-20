@@ -5,6 +5,7 @@ import logo from '../assets/images/logo.svg'
 
 const IntroWrapper = styled.div`
 width: 66%;
+margin-bottom: 60px;
 `
 
 const IntroLogo = styled.div`
@@ -16,6 +17,13 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: 100% 100%;
 overflow: visible;
+
+@media (max-width: 960px) {
+margin: 0 auto;
+margin-bottom: 40px;
+width: 250px;
+height: 35px;
+}
 `
 
 const IntroTitle = styled.h1`
@@ -40,6 +48,18 @@ margin-bottom: 20px;
 }
 & p:first-child {
 padding-right: 50px;
+}
+@media (max-width: 960px) {
+& p:first-child {
+padding-right: 0;
+}
+& p {
+    display: flex;
+    padding-right: 4%;
+    letter-spacing:0.01rem;
+    align-items: center;
+    text-align: justify;
+}
 }
 `
 

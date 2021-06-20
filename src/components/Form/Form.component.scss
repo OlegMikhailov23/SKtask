@@ -5,7 +5,6 @@
   font-weight: 400!important;
   font-size: 14px!important;
   line-height: 100%!important;
-
   letter-spacing: 0.25px;
 
   color: #CDCAD0!important;
@@ -36,13 +35,17 @@
   width: 47%;
   height: 50px;
   & input {
-    padding: 18px 15px;
+    padding: 16px 15px;
   }
 }
 
 .form__full-width {
   width: 100%;
   margin-bottom: 25px!important;
+}
+
+.margin-off {
+  margin-bottom: 0!important;
 }
 
 .MuiPaper-root {
@@ -82,6 +85,7 @@
   border: none!important;
   box-shadow: none!important;
   justify-content: flex-start;
+  padding-bottom: 10px!important;
   &::before {
     height: 0px!important;
   }

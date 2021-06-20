@@ -37,6 +37,9 @@ padding: 40px 30px;
 background: #FFFFFF;
 box-shadow: 0px 5px 20px rgba(53, 50, 56, 0.14);
 border-radius: 8px;
+@media (max-width: 960px) {
+width: 70%;
+}
 `
 
 const FormRow = styled.div`
@@ -44,7 +47,7 @@ display: flex;
 justify-content: space-between;
 flex-direction: row;
 flex-wrap: nowrap;
-margin-bottom: 25px;
+margin-bottom: 20px;
 `
 
 const ButtonDisabled = styled.button`
@@ -287,7 +290,7 @@ const Form = () => {
                     {cities?.map((it, idx) => <MenuItem key={it.id} value={it.id}>{it.name}</MenuItem>)}
                 </TextField>
                 <TextField
-                    className={'form__full-width'}
+                    className={'form__full-width margin-off'}
                     id="outlined-required"
                     label="Название организации/студии"
                     variant="outlined"
