@@ -155,11 +155,11 @@ const Form = () => {
 
     const handleNameChange = (e) => {
         const target = e.target.value;
+        dispatch(setName(target));
         if (!target || target.length < 2) {
             setErrors({...errors, userName: 'Введите имя'});
         } else {
             setErrors({...errors, userName: ''});
-            dispatch(setName(target));
         }
     }
 
