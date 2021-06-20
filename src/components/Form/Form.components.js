@@ -214,11 +214,12 @@ const Form = () => {
             <form id='main-form'>
                 <FormRow>
                     <TextField
-                        className={'form__half-width'}
+                        className={'field__half-width'}
                         required
                         id="outlined-required"
                         label="Ваше имя"
                         variant="outlined"
+                        value={userName}
                         type={'text'}
                         onChange={(e) => {
                             handleNameChange(e)
@@ -228,11 +229,12 @@ const Form = () => {
                         helperText={errors?.userName}
                     />
                     <TextField
-                        className={'form__half-width'}
+                        className={'field__half-width'}
                         required
                         id="outlined-required"
                         label="Номер телефона"
                         variant="outlined"
+                        value={phone}
                         type={'tel'}
                         onChange={(e) => {
                             dispatch(setPhone(e.target.value));
@@ -245,11 +247,12 @@ const Form = () => {
                 </FormRow>
                 <FormRow>
                     <TextField
-                        className={'form__half-width'}
+                        className={'field__half-width'}
                         required
                         id="outlined-required"
                         label="E-mail"
                         variant="outlined"
+                        value={email}
                         type={'email'}
                         onChange={(e) => {
                             dispatch(setEmail(e.target.value));
@@ -260,12 +263,13 @@ const Form = () => {
                         helperText={errors?.email}
                     />
                     <TextField
-                        className={'form__half-width'}
+                        className={'field__half-width'}
                         required
                         id="outlined-required"
                         label="Ссылка на профиль"
                         variant="outlined"
                         type={'text'}
+                        value={profile}
                         onChange={(e) => {
                             dispatch(setProfile(e.target.value));
                             handleProfileChange(e)
@@ -276,11 +280,12 @@ const Form = () => {
                     />
                 </FormRow>
                 <TextField
-                    className={'form__full-width'}
+                    className={'field__full-width'}
                     id="outlined-select-currency"
                     select
                     label="Выберите город"
                     variant="outlined"
+                    value={city}
                     onChange={(e) => {
                         dispatch(setCity(e.target.value));
                     }
@@ -290,10 +295,11 @@ const Form = () => {
                     {cities?.map((it, idx) => <MenuItem key={it.id} value={it.id}>{it.name}</MenuItem>)}
                 </TextField>
                 <TextField
-                    className={'form__full-width margin-off'}
+                    className={'field__full-width margin-off'}
                     id="outlined-required"
                     label="Название организации/студии"
                     variant="outlined"
+                    value={organization}
                     onChange={(e) => {
                         dispatch(setOrganization(e.target.value));
                     }
@@ -311,10 +317,11 @@ const Form = () => {
                     <AccordionDetails>
 
                         <TextField
-                            className={'form__full-width'}
+                            className={'field__full-width'}
                             id="outlined-required"
                             label="Получатель"
                             variant="outlined"
+                            value={recipient}
                             onChange={(e) => {
                                 dispatch(setRecipient(e.target.value));
                             }
@@ -322,11 +329,12 @@ const Form = () => {
                             type={'text'}
                         />
                         <TextField
-                            className={'form__full-width'}
+                            className={'field__full-width'}
                             id="outlined-select-currency"
                             select
                             label="От куда узнали про нас?"
                             variant="outlined"
+                            value={from}
 
                             onChange={(e) => {
                                 dispatch(setFrom(e.target.value));
